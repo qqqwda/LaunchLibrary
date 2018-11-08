@@ -18,6 +18,7 @@ namespace LaunchLibrary.Views
 
             Children.Add(new WelcomePage() { Title ="Welcome"});
             Children.Add(new LaunchesPage() { Title="Next Launches"});
+            Children.Add(new MainPage() { Title="Main page"});
         }
     }
 }
