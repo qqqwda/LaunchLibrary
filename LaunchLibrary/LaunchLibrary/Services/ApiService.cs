@@ -85,9 +85,6 @@ namespace LaunchLibrary.Services
                     Message = ex.Message,
                 };
             }
-
-
-            
         }
 
         #endregion

@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace LaunchLibrary.Models
 {
-    class Payload
+    public class Payload
     {
         [JsonProperty("id")]
         public long Id { get; set; }
