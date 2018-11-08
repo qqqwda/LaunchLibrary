@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LaunchLibrary.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,9 @@ namespace LaunchLibrary
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new MainTabbedPage();
+
+            
         }
 
         protected override void OnStart()
