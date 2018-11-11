@@ -4,6 +4,7 @@
              x:Class="LaunchLibrary.Views.LaunchesPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Content>
+<<<<<<< HEAD
         <ScrollView>
             <StackLayout
                
@@ -39,5 +40,32 @@
 
         </ScrollView>
         
+=======
+        <StackLayout
+            BindingContext="{Binding Launches}">
+            <ListView
+                HasUnevenRows="True"
+                Margin="20px"
+                ItemsSource="{Binding Launches}"
+                IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}"
+                IsPullToRefreshEnabled="True"
+                RefreshCommand="{Binding RefreshCommand}"
+                >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="20">
+                                <Label Text="{Binding Name}" HorizontalOptions="CenterAndExpand" Font="18" TextColor="Black"></Label>
+                                <Label Text="{Binding Windowstart}" HorizontalOptions="CenterAndExpand" Font="10" TextColor="Black"></Label>
+                                <Image Source="{Binding Rocket.ImageUrl}"></Image>
+                                <Label Text="{Binding Location.Name}"></Label>
+                                <Label Text="{Binding Missions[0].Description}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+>>>>>>> da8c4513c1d026cc7da7afcfd8a38f1a0c1b49a6
     </ContentPage.Content>
 </ContentPage>

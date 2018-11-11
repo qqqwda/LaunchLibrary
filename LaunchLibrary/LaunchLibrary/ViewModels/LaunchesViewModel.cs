@@ -38,11 +38,16 @@ namespace LaunchLibrary.ViewModels
             var response = await this.apiService.GetLaunchs<Launchs>(
                 "https://launchlibrary.net",
                 "/1.4/launch",
+<<<<<<< HEAD
                 "/next/6");
+=======
+                "/next/10");
+>>>>>>> da8c4513c1d026cc7da7afcfd8a38f1a0c1b49a6
             //https://launchlibrary.net/1.4/launch/next/1
 
             var list = (List<Launch>)response.Launches;
             this.Launches = new ObservableCollection<Launch>(list);
+<<<<<<< HEAD
 
             foreach (var item in Launches)
             {
@@ -53,6 +58,8 @@ namespace LaunchLibrary.ViewModels
             }
 
             
+=======
+>>>>>>> da8c4513c1d026cc7da7afcfd8a38f1a0c1b49a6
         }
     }
 }
