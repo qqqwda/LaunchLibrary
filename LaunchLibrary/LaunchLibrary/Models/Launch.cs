@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LaunchLibrary.Models
 {
-    class Launch
+    public class Launch
     {
         [JsonProperty("id")]
         public long Id { get; set; }

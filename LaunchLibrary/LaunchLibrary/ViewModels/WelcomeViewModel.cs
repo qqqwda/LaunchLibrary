@@ -25,22 +25,31 @@ namespace LaunchLibrary.ViewModels
                 return;
             }
 
-            var response = await this.apiService.GetList<Launchs>(
+            var response = await this.apiService.GetLaunchs<Launchs>(
                 "https://launchlibrary.net",
                 "/1.4/launch",
-                "/next/1");
+                "/next/3");
             //https://launchlibrary.net/1.4/launch/next/1
 
-            if (!response.IsSuccess)
-            {
-                
-                await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    response.Message,
-                    "OK");
+            await Application.Current.MainPage.DisplayAlert("Alert", response.Launches.ToString(), "OK");
 
-                return;
+            var launches = (List<Launch>)response.Launches;
+
+            foreach (var item in launches)
+            {
+                await Application.Current.MainPage.DisplayAlert("Alert", item.Name, "OK");
             }
+
+            
+
+
+
+
+
+
+
+
+
         }
     }
 }
