@@ -16,9 +16,15 @@ namespace LaunchLibrary.Views
         {
             InitializeComponent();
 
-            Children.Add(new WelcomePage() { Title ="Welcome"});
-            Children.Add(new LaunchesPage() { Title="Next Launches"});
-            Children.Add(new MainPage() { Title="Main page"});
+            this.InitializeChildren();
+        }
+
+        private void InitializeChildren()
+        {
+            Children.Add(new WelcomePage() { Title = "Welcome" });
+            Children.Add(new LaunchesPage() { Title = "Next Launches" });
+            Children.Add(new MainPage() { Title = "Main page" });
+            
         }
     }
 }

@@ -86,7 +86,7 @@ namespace LaunchLibrary.Models
         public Rocket Rocket { get; set; }
 
         [JsonProperty("missions")]
-        public Mission[] Missions { get; set; }
+        public List<Mission> Missions { get; set; }
 
         [JsonProperty("lsp")]
         public Lsp Lsp { get; set; }

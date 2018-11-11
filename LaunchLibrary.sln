@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaunchLibrary.Android", "La
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaunchLibrary.iOS", "LaunchLibrary\LaunchLibrary.iOS\LaunchLibrary.iOS.csproj", "{DF4DC48B-EF32-4255-BC35-D5AEBAAFEF9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaunchLibrary", "LaunchLibrary\LaunchLibrary\LaunchLibrary.csproj", "{7D63C6E5-0D51-4A4E-AA16-A8F6C2AAABEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaunchLibrary", "LaunchLibrary\LaunchLibrary\LaunchLibrary.csproj", "{7D63C6E5-0D51-4A4E-AA16-A8F6C2AAABEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

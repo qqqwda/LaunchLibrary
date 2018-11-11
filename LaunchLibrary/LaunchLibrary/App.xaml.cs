@@ -13,8 +13,6 @@ namespace LaunchLibrary
             InitializeComponent();
 
             MainPage = new MainTabbedPage();
-
-            
         }
 
         protected override void OnStart()
