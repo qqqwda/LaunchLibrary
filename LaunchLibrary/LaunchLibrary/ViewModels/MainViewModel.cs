@@ -8,6 +8,7 @@ namespace LaunchLibrary.ViewModels
     {
         public WelcomeViewModel Welcome { get; set; }
         public LaunchesViewModel Launches { get; set; }
+        public MainPage MainPage { get; set; }
 
         public MainViewModel()
         {

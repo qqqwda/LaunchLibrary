@@ -1,12 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LaunchLibrary.Views.LaunchesPage">
+             x:Class="LaunchLibrary.Views.LaunchesPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to LaunchesPage!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout
+               
+            BindingContext="{Binding Launches}">
+                <ListView
+                    HasUnevenRows="True"
+                    SeparatorVisibility="Default"
+                    SelectionMode="None"
+                    
+                ItemsSource="{Binding Launches}">
+                    <ListView.ItemTemplate>
+                        
+                            <DataTemplate>
+                            <ViewCell
+                                >
+                                <Frame
+                                    HasShadow="True"
+                                    Padding="5">
+                                    <StackLayout
+                                    Padding="15"
+                                    >
+                                    <Label Text="{Binding Name}" Font="17" HorizontalOptions="CenterAndExpand"></Label>
+                                    <Label Text="{Binding Windowstart}" HorizontalOptions="CenterAndExpand" Font="10" TextColor="Black"></Label>
+                                    <Image Source="{Binding Rocket.ImageUrl}" />
+                                    <Label Text="{Binding Location.Name}"></Label>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+        </ScrollView>
+        
     </ContentPage.Content>
 </ContentPage>

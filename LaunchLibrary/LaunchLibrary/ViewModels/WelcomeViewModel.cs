@@ -30,9 +30,7 @@ namespace LaunchLibrary.ViewModels
                 "/1.4/launch",
                 "/next/3");
             //https://launchlibrary.net/1.4/launch/next/1
-
-            await Application.Current.MainPage.DisplayAlert("Alert", response.Launches.ToString(), "OK");
-
+            
             var launches = (List<Launch>)response.Launches;
 
             

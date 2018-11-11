@@ -7,6 +7,8 @@ namespace LaunchLibrary.Models
 {
     public class Mission
     {
+        private string description = "";
+
         [JsonProperty("id")]
         public long Id { get; set; }
 
@@ -14,7 +16,19 @@ namespace LaunchLibrary.Models
         public string Name { get; set; }
 
         [JsonProperty("description")]
-        public string Description { get; set; }
+        public string Description {
+            get
+            {
+                return description;
+            }
+            set
+            { 
+                    if (!string.IsNullOrEmpty(value))
+                {
+                    description = value;
+                }
+            }
+        }
 
         [JsonProperty("type")]
         public long Type { get; set; }
