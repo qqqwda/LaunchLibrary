@@ -35,10 +35,7 @@ namespace LaunchLibrary.ViewModels
 
             var launches = (List<Launch>)response.Launches;
 
-            foreach (var item in launches)
-            {
-                await Application.Current.MainPage.DisplayAlert("Alert", item.Name, "OK");
-            }
+            
 
             
 
