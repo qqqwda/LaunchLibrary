@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using LaunchLibrary.Models;
+using Newtonsoft.Json;
 using Plugin.Connectivity;
 using System;
 using System.Collections.Generic;
@@ -54,27 +55,27 @@ namespace LaunchLibrary.Services
             {
                 var client = new HttpClient();
                 client.BaseAddress = new Uri(urlBase);
-                var url = string.Format("{0}{1}", servicePrefix, controller);
-                var response = await client.GetAsync(url);
-                var result = await response.Content.ReadAsStringAsync();
+                var url = string.Format("{0}{1}{2}", urlBase, servicePrefix, controller);
+                var json = await client.GetStringAsync(url);
 
-                if (!response.IsSuccessStatusCode)
+                if (string.IsNullOrWhiteSpace(json))
                 {
                     return new Response
                     {
                         IsSuccess = false,
-                        Message = result
+                        Message = "Json returned empty",
+
                     };
                 }
-
-                var list = JsonConvert.DeserializeObject<List<T>>(result);
+                var list = JsonConvert.DeserializeObject<List<T>>(json);
 
                 return new Response
                 {
                     IsSuccess = true,
-                    Message = "OK",
+                    Message = list.ToString(),
                     Result = list
                 };
+
 
             }
             catch (Exception ex)
@@ -87,6 +88,20 @@ namespace LaunchLibrary.Services
             }
         }
 
+        public async Task<Launchs> GetLaunchs<T>(string urlBase, string servicePrefix, string controller)
+        {
+            using (var client = new HttpClient())
+            {
+                var url = string.Format("{0}{1}{2}", urlBase, servicePrefix, controller);
+                var json = await client.GetStringAsync(url);
+
+                if (string.IsNullOrWhiteSpace(json))
+                    return null;
+
+                return JsonConvert.DeserializeObject<Launchs>(json);
+            }
+
+        }
         #endregion
 
     }

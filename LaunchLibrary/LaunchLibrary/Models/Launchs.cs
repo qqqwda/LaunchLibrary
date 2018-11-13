@@ -5,10 +5,10 @@ using System.Text;
 
 namespace LaunchLibrary.Models
 {
-    class Launchs
+    public class Launchs
     {
         [JsonProperty("launches")]
-        public Launch[] Launches { get; set; }
+        public List<Launch> Launches { get; set; }
 
         [JsonProperty("total")]
         public long Total { get; set; }

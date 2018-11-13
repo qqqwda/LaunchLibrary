@@ -11,6 +11,7 @@
                 <Label Text="Welcome to LaunchLibrary!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+                <Button Command="{Binding GoToInfoPage}"></Button>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
