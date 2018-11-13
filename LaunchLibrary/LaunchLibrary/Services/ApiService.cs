@@ -102,6 +102,21 @@ namespace LaunchLibrary.Services
             }
 
         }
+
+        public async Task<RootRockets> GetRockets<T>(string urlBase, string servicePrefix)
+        {
+            using (var client = new HttpClient())
+            {
+                var url = string.Format("{0}{1}", urlBase, servicePrefix);
+                var json = await client.GetStringAsync(url);
+
+                if (string.IsNullOrWhiteSpace(json))
+                    return null;
+
+                return JsonConvert.DeserializeObject<RootRockets>(json);
+            }
+
+        }
         #endregion
 
     }

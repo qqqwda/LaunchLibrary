@@ -4,14 +4,26 @@
              x:Class="LaunchLibrary.Views.WelcomePage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              Title="Welcome">
-    <ContentPage.Content>
+    <ContentPage.Content
+        >
         <ScrollView
+            Padding="10"
             BindingContext="{Binding Welcome}">
-            <StackLayout>
-                <Label Text="Welcome to LaunchLibrary!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+            <StackLayout VerticalOptions="CenterAndExpand">
+                
+                <Grid>
+                    <Button
+                       Text="Agencies" BackgroundColor="#73c6b6" Grid.Row="0" Grid.Column="0" Command="{Binding AgenciesCommand}">
+                        
+                    </Button>
+                    <Button
+                       Text="Rockets"  BackgroundColor="#7dcea0" Grid.Row="0" Grid.Column="1" Command="{Binding RocketsCommand}">
+
+                    </Button>
+                </Grid>
             </StackLayout>
+            
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
