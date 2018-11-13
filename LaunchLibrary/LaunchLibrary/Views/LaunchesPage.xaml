@@ -9,11 +9,14 @@
                
             BindingContext="{Binding Launches}">
                 <ListView
+                    ItemsSource="{Binding Launches}"
                     HasUnevenRows="True"
                     SeparatorVisibility="Default"
                     SelectionMode="None"
-                    
-                ItemsSource="{Binding Launches}">
+                    IsPullToRefreshEnabled="True"
+                    IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}"
+                    RefreshCommand="{Binding RefreshCommand}"
+                    >
                     <ListView.ItemTemplate>
                         
                             <DataTemplate>

@@ -12,8 +12,10 @@ namespace LaunchLibrary.ViewModels
 
         public MainViewModel()
         {
-            this.Launches = new LaunchesViewModel();
             this.Welcome = new WelcomeViewModel();
+            this.Launches = new LaunchesViewModel();
+            this.MainPage = new MainPage();
+
         }
 
         #region Singleton
