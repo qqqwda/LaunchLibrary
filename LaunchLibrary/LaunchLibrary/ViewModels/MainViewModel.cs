@@ -7,12 +7,20 @@ namespace LaunchLibrary.ViewModels
     public class MainViewModel
     {
         public WelcomeViewModel Welcome { get; set; }
+
         public LaunchesViewModel Launches { get; set; }
+
+        public MainPage MainPage { get; set; }
+
+        public RocketsViewModel Rockets { get; set; }
 
         public MainViewModel()
         {
-            this.Launches = new LaunchesViewModel();
+            instance = this;
             this.Welcome = new WelcomeViewModel();
+            this.Launches = new LaunchesViewModel();
+            this.MainPage = new MainPage();
+
         }
 
         #region Singleton
@@ -24,10 +32,8 @@ namespace LaunchLibrary.ViewModels
                 return new MainViewModel();
 
             }
-            else
-            {
-                return instance;
-            }
+          return instance;
+            
         }
         #endregion
 

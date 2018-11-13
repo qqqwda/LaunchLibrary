@@ -17,9 +17,10 @@ namespace LaunchLibrary.ViewModels
         public WelcomeViewModel()
         {
             this.apiService = new ApiService();
-            LoadLaunch();
+            //LoadLaunch();
         }
 
+<<<<<<< HEAD
         public ICommand InfoPage()
         {
             return new RelayCommand(GoToInfoPage);
@@ -31,14 +32,22 @@ namespace LaunchLibrary.ViewModels
         }
 
         private async void LoadLaunch()
+=======
+        public ICommand AgenciesCommand
+>>>>>>> 6c5489f85524e0f608563aafd364d6aa2de5a056
         {
-            var connection = await this.apiService.CheckConnection();
-            if (!connection.IsSuccess)
+            get
             {
+<<<<<<< HEAD
                 await Application.Current.MainPage.DisplayAlert("Error", connection.Message, "OK");
                 return;
+=======
+                return new RelayCommand(GoToAgenciesPage);
+>>>>>>> 6c5489f85524e0f608563aafd364d6aa2de5a056
             }
+        }
 
+<<<<<<< HEAD
             var response = await this.apiService.GetLaunchs<Launchs>(
                 "https://launchlibrary.net",
                 "/1.4/launch",
@@ -59,6 +68,28 @@ namespace LaunchLibrary.ViewModels
 
 
 
+=======
+        public ICommand RocketsCommand
+        {
+            get
+            {
+                return new RelayCommand(GoToRocketsPage);
+            }
+>>>>>>> 6c5489f85524e0f608563aafd364d6aa2de5a056
         }
+
+        private async void GoToRocketsPage()
+        {
+            MainViewModel.GetInstance().Rockets = new RocketsViewModel();
+            await Application.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new RocketsPage()));
+            
+        }
+
+        private async void GoToAgenciesPage()
+        {
+            await Application.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new AgenciesPage()));
+            return;
+        }
+        
     }
 }
