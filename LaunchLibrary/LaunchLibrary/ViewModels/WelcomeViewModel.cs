@@ -39,7 +39,7 @@ namespace LaunchLibrary.ViewModels
         private async void GoToRocketsPage()
         {
             MainViewModel.GetInstance().Rockets = new RocketsViewModel();
-            await Application.Current.MainPage.Navigation.PushModalAsync(new RocketsPage());
+            await Application.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new RocketsPage()));
             
         }
 

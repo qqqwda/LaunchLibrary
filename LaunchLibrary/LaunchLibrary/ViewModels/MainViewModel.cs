@@ -16,6 +16,7 @@ namespace LaunchLibrary.ViewModels
 
         public MainViewModel()
         {
+            instance = this;
             this.Welcome = new WelcomeViewModel();
             this.Launches = new LaunchesViewModel();
             this.MainPage = new MainPage();
@@ -31,10 +32,8 @@ namespace LaunchLibrary.ViewModels
                 return new MainViewModel();
 
             }
-            else
-            {
-                return instance;
-            }
+          return instance;
+            
         }
         #endregion
 

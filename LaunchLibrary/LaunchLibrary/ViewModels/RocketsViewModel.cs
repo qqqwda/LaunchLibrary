@@ -38,12 +38,13 @@ namespace LaunchLibrary.ViewModels
 
             var response = await this.apiService.GetRockets<RootRockets>(
                 "https://launchlibrary.net",
-                "/1.4/rocket");
+                "/1.4/rocket/next/8");
 
             var list = (List<Rocket>)response.Rockets;
             this.Rockets = new ObservableCollection<Rocket>(list);
 
-            await Application.Current.MainPage.DisplayAlert("", response.Count.ToString(),"OK");
+            await Application.Current.MainPage.DisplayAlert("", Rockets.Count.ToString(),"OK");
+            return;
             
         }
     }

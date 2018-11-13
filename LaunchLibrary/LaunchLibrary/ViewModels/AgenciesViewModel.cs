@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LaunchLibrary.ViewModels
 {
-    public class AgenciesViewModel : RocketsViewModel
+    public class AgenciesViewModel : BaseViewModel
     {
         public AgenciesViewModel()
         {
