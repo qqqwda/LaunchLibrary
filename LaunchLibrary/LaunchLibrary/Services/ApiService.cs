@@ -55,7 +55,11 @@ namespace LaunchLibrary.Services
             {
                 var client = new HttpClient();
                 client.BaseAddress = new Uri(urlBase);
+<<<<<<< HEAD
+                var url = string.Format("{0}{1}{2}", urlBase, servicePrefix, controller);
+=======
                 var url = string.Format("{0}{1}{2}",urlBase, servicePrefix, controller);
+>>>>>>> 6c5489f85524e0f608563aafd364d6aa2de5a056
                 var json = await client.GetStringAsync(url);
 
                 if (string.IsNullOrWhiteSpace(json))
@@ -76,6 +80,7 @@ namespace LaunchLibrary.Services
                     Result = list
                 };
                 
+
 
             }
             catch (Exception ex)
@@ -102,6 +107,8 @@ namespace LaunchLibrary.Services
             }
 
         }
+<<<<<<< HEAD
+=======
 
         public async Task<RootRockets> GetRockets<T>(string urlBase, string servicePrefix)
         {
@@ -117,6 +124,7 @@ namespace LaunchLibrary.Services
             }
 
         }
+>>>>>>> 6c5489f85524e0f608563aafd364d6aa2de5a056
         #endregion
 
     }

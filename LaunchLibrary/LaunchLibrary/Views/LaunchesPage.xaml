@@ -9,6 +9,16 @@
                
             BindingContext="{Binding Launches}">
                 <ListView
+<<<<<<< HEAD
+                    HasUnevenRows="True"
+                    SeparatorVisibility="Default"
+                    SelectionMode="None"
+                    
+                ItemsSource="{Binding Launches}">
+                    <ListView.ItemTemplate>
+
+                        <DataTemplate>
+=======
                     ItemsSource="{Binding Launches}"
                     HasUnevenRows="True"
                     SeparatorVisibility="Default"
@@ -20,6 +30,7 @@
                     <ListView.ItemTemplate>
                         
                             <DataTemplate>
+>>>>>>> 6c5489f85524e0f608563aafd364d6aa2de5a056
                             <ViewCell
                                 >
                                 <Frame
@@ -28,10 +39,17 @@
                                     <StackLayout
                                     Padding="15"
                                     >
+<<<<<<< HEAD
+                                        <Label Text="{Binding Name}" Font="17" HorizontalOptions="CenterAndExpand"></Label>
+                                        <Label Text="{Binding Windowstart}" HorizontalOptions="CenterAndExpand" Font="10" TextColor="Black"></Label>
+                                        <Image Source="{Binding Rocket.ImageUrl}" />
+                                        <Label Text="{Binding Location.Name}"></Label>
+=======
                                     <Label Text="{Binding Name}" Font="17" HorizontalOptions="CenterAndExpand"></Label>
                                     <Label Text="{Binding Windowstart}" HorizontalOptions="CenterAndExpand" Font="10" TextColor="Black"></Label>
                                     <Image Source="{Binding Rocket.ImageUrl}" />
                                     <Label Text="{Binding Location.Name}"></Label>
+>>>>>>> 6c5489f85524e0f608563aafd364d6aa2de5a056
                                         <Label Text="{Binding Missions[0].Description}"/>
                                     </StackLayout>
                                 </Frame>
@@ -42,6 +60,10 @@
             </StackLayout>
 
         </ScrollView>
+<<<<<<< HEAD
+
+=======
         
+>>>>>>> 6c5489f85524e0f608563aafd364d6aa2de5a056
     </ContentPage.Content>
 </ContentPage>

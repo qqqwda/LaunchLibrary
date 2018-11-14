@@ -23,7 +23,11 @@
   </ItemGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
+    <EmbeddedResource Update="Views\InfoPage.xaml">
+=======
     <EmbeddedResource Update="Views\AgenciesPage.xaml">
+>>>>>>> 6c5489f85524e0f608563aafd364d6aa2de5a056
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\LandingPage.xaml">

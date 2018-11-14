@@ -10,6 +10,13 @@
         <ScrollView
             Padding="10"
             BindingContext="{Binding Welcome}">
+<<<<<<< HEAD
+            <StackLayout>
+                <Label Text="Welcome to LaunchLibrary!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                <Button Command="{Binding GoToInfoPage}"></Button>
+=======
 
             <StackLayout VerticalOptions="CenterAndExpand">
                
@@ -33,6 +40,7 @@
 
                     </Button>
                 </Grid>
+>>>>>>> 6c5489f85524e0f608563aafd364d6aa2de5a056
             </StackLayout>
             
         </ScrollView>
