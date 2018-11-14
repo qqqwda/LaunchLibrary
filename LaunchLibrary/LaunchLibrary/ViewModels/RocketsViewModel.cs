@@ -42,9 +42,7 @@ namespace LaunchLibrary.ViewModels
 
             var list = (List<Rocket>)response.Rockets;
             this.Rockets = new ObservableCollection<Rocket>(list);
-
-            await Application.Current.MainPage.DisplayAlert("", Rockets.Count.ToString(),"OK");
-            return;
+            
             
         }
     }

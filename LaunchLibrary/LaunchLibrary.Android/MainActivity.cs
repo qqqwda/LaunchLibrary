@@ -6,6 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Lottie.Forms;
+using CarouselView.FormsPlugin.Android;
 
 namespace LaunchLibrary.Droid
 {
@@ -16,10 +18,19 @@ namespace LaunchLibrary.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
+            InitControls();
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
+            
+            
             LoadApplication(new App());
+        }
+
+        private void InitControls()
+        {
+            CarouselViewRenderer.Init();
         }
     }
 }

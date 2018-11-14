@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Lottie.Forms;
 
 namespace LaunchLibrary.Views
 {
@@ -15,6 +16,10 @@ namespace LaunchLibrary.Views
         public WelcomePage()
         {
             InitializeComponent();
+           
+
+
+
         }
     }
 }

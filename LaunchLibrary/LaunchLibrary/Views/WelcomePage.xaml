@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              x:Class="LaunchLibrary.Views.WelcomePage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              Title="Welcome">
@@ -11,8 +12,18 @@
             BindingContext="{Binding Welcome}">
 
             <StackLayout VerticalOptions="CenterAndExpand">
-                
-                <Grid>
+               
+                    <forms:AnimationView 
+	                    x:Name="animationView" 
+	                    Animation="favourite_app_icon.json" 
+	                    Loop="True" 
+	                    AutoPlay="True"
+                        HeightRequest="300"
+                        WidthRequest="300"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"/>        
+
+                    <Grid>
                     <Button
                        Text="Agencies" BackgroundColor="#73c6b6" Grid.Row="0" Grid.Column="0" Command="{Binding AgenciesCommand}">
                         

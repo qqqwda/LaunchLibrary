@@ -23,7 +23,7 @@
                                     <StackLayout
                                     Padding="15"
                                     >
-                                        <Label Text="{Binding Name}" Font="13" HorizontalOptions="CenterAndExpand"></Label>
+                                        <Label Text="{Binding Name}" Font="17" HorizontalOptions="StartAndExpand"></Label>
                                         
                                         <Image Source="{Binding ImageUrl}" />
                                         
